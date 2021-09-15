@@ -262,9 +262,9 @@ app.put('/editProfile', async (req, res) => {
 app.get('/data', async (req, res) => {
     const { city } = req.body
 
-    const res = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_KEY} &q=${city}&days=5&aqi=no&alerts=no`)
+    const weatherInfo = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_KEY} &q=${city}&days=5&aqi=no&alerts=no`)
 
-    res.status(200).send(res)
+    res.status(200).send(weatherInfo)
 })
 
 // The "catchall" handler: for any request that doesn't
