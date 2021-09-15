@@ -16,10 +16,8 @@ export default function Dashboard() {
     const username = useSelector((state) => state.loggedIn.user_name)
     const city = useSelector((state) => state.loggedIn.city)
 
-
-
     useEffect(() => {
-        axios.get(process.env.WEATHER_API + city + process.env.WEATHER_TWO).then(response => {
+        axios.get(process.env.WEATHER_API + '=' + city + process.env.WEATHER_TWO).then(response => {
             // Dispatch actions with the data we received
             console.log(response.data)
             dispatch({ type: 'weather/currentWeather', payload: response.data })
