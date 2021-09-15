@@ -19,7 +19,7 @@ export default function Dashboard() {
 
 
     useEffect(() => {
-        axios.get(process.env.WEATHER_API).then(response => {
+        axios.get(process.env.WEATHER_API + city + process.env.WEATHER_TWO).then(response => {
             // Dispatch actions with the data we received
             console.log(response.data)
             dispatch({ type: 'weather/currentWeather', payload: response.data })
