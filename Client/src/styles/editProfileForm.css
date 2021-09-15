@@ -1,0 +1,26 @@
+.profile-form-container {
+  line-height: 1.5em;
+  height: 70%;
+  width: 50%;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+}
+
+.profile-form-container input[type="text"] {
+  width: 100%;
+  border-radius: 6px;
+  height: 2em;
+}
+
+.profile-form-container button {
+  margin-top: 5px;
+  background-color: #343434;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.profile-form-container button:hover {
+  opacity: 0.88;
+}

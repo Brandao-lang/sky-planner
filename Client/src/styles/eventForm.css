@@ -1,0 +1,20 @@
+.form-container {
+  margin: 0 auto;
+  width: 20%;
+  line-height: 1.9em;
+}
+
+.form-container button[type="button"],
+.form-container button[type="submit"] {
+  width: 40%;
+  margin: 0 auto;
+  color: white;
+  background-color: #343434;
+  border: none;
+  border-radius: 6px;
+}
+
+.form-container button[type="button"]:hover,
+.form-container button[type="submit"]:hover {
+  opacity: 0.88;
+}

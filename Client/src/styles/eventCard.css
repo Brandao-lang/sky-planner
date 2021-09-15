@@ -1,0 +1,116 @@
+.card-container {
+  border: 2px solid black;
+  width: 390%;
+}
+
+.title {
+  width: 80px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.warning {
+  border: 2px solid red;
+  width: 390%;
+}
+
+.events-list {
+  display: grid;
+  float: left;
+  margin: none;
+  width: 5%;
+}
+
+.task-btn {
+  position: absolute;
+  right: 86%;
+  bottom: 90%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 1.5em;
+}
+
+.task-btn:hover {
+  font-size: 1.6em;
+  transition: 0.3s;
+}
+
+.show-details {
+  display: block;
+  text-align: left;
+  padding-left: 12px;
+  width: 70px;
+}
+
+.show-details hr {
+  width: 440%;
+}
+
+.show-details button {
+  margin: 0;
+}
+
+.show-details p {
+  width: 340%;
+}
+
+.hide-details {
+  display: none;
+}
+
+.symbol-btn {
+  float: right;
+  padding-right: 5px;
+  font-size: 1.8em;
+}
+
+.event-btns {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+.event-btns .delete-btn {
+  margin-right: 10px;
+}
+
+.show {
+  display: block;
+  float: right;
+  font-size: 2em;
+  padding-right: 10px;
+  position: absolute;
+  height: 50px;
+}
+
+.warning-is-true {
+  color: red;
+}
+
+.visible {
+  border: none;
+  font-size: 30px;
+  background-color: #ffff;
+}
+
+.delete-btn {
+  background-color: #343434;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.edit-btn {
+  background-color: #343434;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+  opacity: 0.88;
+}

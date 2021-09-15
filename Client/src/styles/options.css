@@ -1,0 +1,35 @@
+.options-menu {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.show-menu button {
+  background-color: #343434;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.show-menu button:hover {
+  opacity: 0.88;
+}
+
+.options-menu img {
+  height: 50px;
+}
+
+.show-menu {
+  display: block;
+  border: 2px solid black;
+  width: 5%;
+  float: right;
+  text-align: center;
+  line-height: 3em;
+  position: absolute;
+  left: 93%;
+}
+
+.hide-menu {
+  display: none;
+}

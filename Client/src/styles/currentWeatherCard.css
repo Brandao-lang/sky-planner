@@ -1,0 +1,129 @@
+.current-day-card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 90%;
+  height: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.current-event {
+  border: 1px solid black;
+  border-radius: 6px;
+  width: 40%;
+  height: 55%;
+  margin: 20px;
+  margin-right: 100px;
+}
+
+.current-event h1 {
+  padding: 10px;
+}
+
+.current-event p {
+  padding: 10px;
+}
+
+.back {
+  position: absolute;
+  top: 40%;
+  right: 45%;
+  background-color: #343434;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.next {
+  position: absolute;
+  top: 40%;
+  left: 83%;
+  background-color: #343434;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.back:hover,
+.next:hover {
+  opacity: 0.88;
+}
+
+.position {
+  position: absolute;
+  left: 67%;
+  top: 38%;
+}
+
+.weather-info {
+  text-align: left;
+  height: 90%;
+  width: 40%;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.weather-info button {
+  background-color: #343434;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.weather-info button:hover {
+  opacity: 0.88;
+}
+
+.weather-container {
+  padding: 20px;
+  line-height: 3em;
+}
+
+.weather-container h4 {
+  margin: 0;
+}
+
+.sun {
+  height: 60px;
+  margin-left: 18%;
+}
+
+.rise {
+  display: inline;
+  margin-left: 18%;
+}
+
+.set {
+  display: inline;
+  margin-left: 19%;
+}
+
+.geo-info {
+  line-height: 1em;
+}
+
+.geo-info img {
+  height: 1em;
+}
+
+.temp-info {
+  display: flex;
+}
+
+.temp-info h1 {
+  margin: 7px;
+}
+
+.events-list {
+  padding-left: 20px;
+}
+
+.current-event img {
+  height: 150px;
+  margin-bottom: 200px;
+}
