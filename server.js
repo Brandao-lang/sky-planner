@@ -262,7 +262,7 @@ app.put('/editProfile', async (req, res) => {
 app.get('/data', async (req, res) => {
     const { city } = req.body
 
-    const weatherInfo = axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_KEY} &q=${city}&days=5&aqi=no&alerts=no`)
+    const weatherInfo = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_KEY} &q=${city}&days=5&aqi=no&alerts=no`)
 
     res.status(200).send(weatherInfo)
 })
