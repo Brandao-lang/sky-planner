@@ -259,12 +259,13 @@ app.put('/editProfile', async (req, res) => {
 })
 
 //new code below
-app.post('/data', async (req, res) => {
-    const { city } = req.body
-
-    const weatherInfo = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_KEY} &q=${city}&days=5&aqi=no&alerts=no`)
-
-    res.status(200).send(weatherInfo)
+app.post('/getData', async (req, res) => {
+    const { name } = req.body
+    
+    const weatherCall = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_KEY}&q=${name}&days=5&aqi=no&alerts=no`).then(response => {
+        const weatherInfo = response.data
+        res.status(200).send(weatherInfo)
+    })
 })
 
 // The "catchall" handler: for any request that doesn't

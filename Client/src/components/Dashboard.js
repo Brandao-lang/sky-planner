@@ -15,16 +15,17 @@ export default function Dashboard() {
 
     const username = useSelector((state) => state.loggedIn.user_name)
     const city = useSelector((state) => state.loggedIn.city)
-
+    
     useEffect(() => {
-        axios.post('/data', city).then(response => {
+        const cityObj = {
+            name: city
+        }
+        axios.post(`/getData`, cityObj).then(response => {
             // Dispatch actions with the data we received
-            console.log(response.data)
             dispatch({ type: 'weather/currentWeather', payload: response.data })
             dispatch({ type: 'weather/forecastWeather', payload: response.data })
-
         })
-    }, [])
+    }, [city, dispatch])
 
     function formHandler() {
         setIsFormOpen(!isFormOpen)
