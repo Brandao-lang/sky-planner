@@ -44,3 +44,54 @@
   height: 100vh;
   width: auto;
 }
+
+@media only screen and (max-width: 736px) {
+  .login-form {
+    position: absolute;
+    width: 80%;
+    height: 45%;
+    border: 1px solid black;
+    text-align: center;
+    top: 20%;
+    left: 10%;
+  }
+
+  .break {
+    display: none;
+  }
+
+  .login-input {
+    width: 80%;
+    height: 30px;
+    margin: 10px;
+    border-radius: 3%;
+  }
+
+  .login-button {
+    padding: 5px 10px;
+    color: white;
+    background-color: #a0b9c6;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+  .login-form {
+    position: absolute;
+    width: 80%;
+    height: 45%;
+    border: 1px solid black;
+    text-align: center;
+    top: 20%;
+    left: 10%;
+  }
+
+  .login-input {
+    width: 60%;
+    height: 30px;
+    margin: 10px;
+    border-radius: 3%;
+  }
+}

@@ -127,3 +127,98 @@
   height: 150px;
   margin-bottom: 200px;
 }
+
+@media only screen and (max-width: 736px) {
+  .current-day-card {
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    height: 660px;
+  }
+
+  .weather-info {
+    text-align: left;
+    height: 55%;
+    width: 120%;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 6px;
+    /* background-color: red; */
+  }
+
+  .sun {
+    height: 50px;
+    margin-top: 20px;
+  }
+
+  .rise {
+    position: absolute;
+    left: 9%;
+    top: 340px;
+  }
+
+  .set {
+    position: absolute;
+    top: 340px;
+    left: 35%;
+    width: 20%;
+  }
+
+  .weather-data {
+    margin-top: 2px;
+    line-height: normal;
+  }
+
+  /* current event card */
+
+  .current-event {
+    border: 1px solid black;
+    border-radius: 6px;
+    width: 120%;
+    height: 35%;
+    margin: 0px;
+    margin-right: 18px;
+    margin-left: 18px;
+  }
+
+  .current-event h1 {
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-top: 1px;
+  }
+
+  .current-event img {
+    height: 110px;
+  }
+
+  .current-event p {
+    padding: 10px;
+  }
+
+  .back {
+    position: absolute;
+    top: 76%;
+    right: 75%;
+    background-color: #343434;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 3px 8px;
+  }
+
+  .next {
+    position: absolute;
+    top: 76%;
+    left: 75%;
+    background-color: #343434;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 3px 8px;
+  }
+
+  .position {
+    position: absolute;
+    left: 42%;
+    top: 74%;
+  }
+}

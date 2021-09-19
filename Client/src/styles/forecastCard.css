@@ -13,3 +13,14 @@
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (max-width: 736px) {
+  .forecast-cards {
+    width: 30%;
+    font-size: 0.7rem;
+  }
+
+  .four-day-forecast {
+    width: 100%;
+  }
+}

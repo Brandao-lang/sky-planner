@@ -59,19 +59,20 @@ export default function CurrentWeatherCard() {
                         <h1>{temp}({metric})</h1>
                     </div>
                     {/* <h3>feels like {feelsLikeF}(F)</h3> */}
-                    <h4>{condition}</h4>
-                    <span>humidity: {humidity}%</span>
-                    <br/>
-                    <span>wind mph: {wind_mph}</span>
+                    <div className='weather-data'>
+                        <h4>{condition}</h4>
+                        <span>humidity: {humidity}%</span>
+                        <br/>
+                        <span>wind mph: {wind_mph}</span>
+                    </div>
+                    <br className='break' />
+                    <img className='sun' src="https://i.imgur.com/cJOGFQI.png" alt='sunrise' />
+                    <img className='sun' src='https://www.pinclipart.com/picdir/big/520-5209158_computer-icons-sunset-clip-art-sunrise-black-and.png' alt='sunset'/>
+                    <br className='break'/>
+                    <p className='rise'>{sunrise}</p>
+                    <p className='set'>{sunset}</p> 
                 </div>
-                <br />
-                <img className='sun' src="https://i.imgur.com/cJOGFQI.png" alt='sunrise' />
-                <img className='sun' src='https://www.pinclipart.com/picdir/big/520-5209158_computer-icons-sunset-clip-art-sunrise-black-and.png' alt='sunset'/>
-                <br/>
-                <p className='rise'>{sunrise}</p>
-                <p className='set'>{sunset}</p>             
             </div>
-            
             <div className='current-event'>
                 
                 {selectedEvent[0].title === 'nothing planned for this day' ? 

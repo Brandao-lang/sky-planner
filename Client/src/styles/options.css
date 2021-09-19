@@ -33,3 +33,16 @@
 .hide-menu {
   display: none;
 }
+
+@media only screen and (max-width: 736px) {
+  .show-menu {
+    display: block;
+    border: 2px solid black;
+    width: 20%;
+    float: right;
+    text-align: center;
+    line-height: 2em;
+    position: absolute;
+    left: 80%;
+  }
+}

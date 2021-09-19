@@ -54,7 +54,7 @@ export default function EditProfile(props) {
                         textAlign: 'center',
                     },
                     content: {
-                        width: '20vw',
+                        width: '40vw',
                         height: '30vh',
                         margin: '0 auto'
                     }

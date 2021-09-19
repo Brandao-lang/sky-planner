@@ -13,7 +13,7 @@
 }
 
 .profile-form-container button {
-  margin-top: 5px;
+  margin-top: 20px;
   background-color: #343434;
   color: white;
   border: none;
@@ -23,4 +23,10 @@
 
 .profile-form-container button:hover {
   opacity: 0.88;
+}
+
+@media only screen and (max-width: 736px) {
+  .profile-form-container {
+    width: 100%;
+  }
 }

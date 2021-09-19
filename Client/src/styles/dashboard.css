@@ -3,3 +3,11 @@
   left: 20%;
   width: 65%;
 }
+
+@media only screen and (max-width: 736px) {
+  .weather-hud {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+  }
+}

@@ -81,7 +81,7 @@ return (
                 />
                  {formik.touched.user_password && formik.errors.user_password ? <div className='login-error'>{formik.errors.user_password}</div> : null}
             </div>
-            <br />
+            <br className='break' />
             <button className='login-button' type='Submit'>Login</button>
         </form>
     
