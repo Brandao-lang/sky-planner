@@ -133,6 +133,7 @@
     flex-wrap: wrap;
     font-size: 0.9rem;
     height: 660px;
+    width: 90vw;
   }
 
   .weather-info {

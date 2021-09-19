@@ -23,4 +23,11 @@
   .form-container {
     width: 100%;
   }
+
+  .form-container input[type="text"],
+  .form-container input[type="number"],
+  .form-container input[type="select"],
+  textarea {
+    width: 90%;
+  }
 }
