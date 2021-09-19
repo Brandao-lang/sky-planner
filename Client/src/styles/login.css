@@ -81,7 +81,7 @@
   .login-form {
     position: absolute;
     width: 80%;
-    height: 45%;
+    height: 50vh;
     border: 1px solid black;
     text-align: center;
     top: 20%;
