@@ -23,7 +23,6 @@ export default function EventsDisplay(props) {
                 user_email
             }
         }).then(res => {
-                console.log(res.data)
                 dispatch({type:'events/getEvents', payload: res.data})
         }).catch((err) => {
             console.log(`could not fetch user events: ${err}`)

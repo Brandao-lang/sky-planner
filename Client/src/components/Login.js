@@ -21,7 +21,6 @@ export default function Login(props) {
             }
         })
         .then(res => {
-            console.log(res.data)
             dispatch({type:'user/getUser', payload: res.data})
             props.history.push('/dashboard')
         })

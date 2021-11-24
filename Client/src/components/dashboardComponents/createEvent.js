@@ -100,16 +100,9 @@ export default function CreateEvent(props) {
                 serverId: resObj.eventId
             }
             dispatch({type:'events/addEvent', payload: disObj})
-            
-            console.log(disObj)
-            
-        })
-        .catch(err => {
+        }).catch(err => {
             console.log(err)
         })
-        
-        console.log(eventObj)
-        
         
         // Reset the form
         setEventTitle('')

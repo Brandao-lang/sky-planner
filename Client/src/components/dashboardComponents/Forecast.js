@@ -16,8 +16,6 @@ export default function Forecast() {
     
     const weatherForecast = forecastArr.map((day, index) => <ForecastCard key={index} temp={day[`temp${metric}`]} tempF={day.tempF} tempC={day.tempC} date={day.date} condition={day.condition} humidity={day.avgHumidity} wind_mph = {day.wind_mph} sunrise ={day.sunrise} sunset={day.sunset} icon={day.icon} />)
 
-    console.log(weatherForecast)
-    
     return (
         <div className='four-day-forecast'>
             {weatherForecast}

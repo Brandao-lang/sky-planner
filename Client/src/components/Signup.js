@@ -29,7 +29,6 @@ export default function NewUser (props) {
 
         axios.post('/signup', user)
         .then(res => {
-            console.log(res.data)
             props.history.push('/success')
         })
         .catch(err => {
