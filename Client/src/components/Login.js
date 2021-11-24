@@ -14,14 +14,12 @@ export default function Login(props) {
             user_password: ''
     },
         onSubmit: (values, {resetForm}) => {
-            
-            const user = {
-            user_email: formik.values.user_email,
-            user_password: formik.values.user_password
-        }
-
-        // console.log(user)
-        axios.post('/login', user)
+        axios.get('/login', {
+            params: {
+                user_email: formik.values.user_email,
+                user_password: formik.values.user_password 
+            }
+        })
         .then(res => {
             console.log(res.data)
             dispatch({type:'user/getUser', payload: res.data})

@@ -17,13 +17,16 @@ export default function Dashboard() {
     const city = useSelector((state) => state.loggedIn.city)
     
     useEffect(() => {
-        const cityObj = {
-            name: city
-        }
-        axios.post(`/getData`, cityObj).then(response => {
+        axios.get(`/getData`, {
+            params: {
+                name: city
+            }
+        }).then(response => {
             // Dispatch actions with the data we received
             dispatch({ type: 'weather/currentWeather', payload: response.data })
             dispatch({ type: 'weather/forecastWeather', payload: response.data })
+        }).catch((err) => {
+            console.log(`weather data could not be retreived: ${err}`)
         })
     }, [city, dispatch])
 
@@ -34,7 +37,6 @@ export default function Dashboard() {
     return (
         <div className='user-dash'>
             <Options />
-            {/* <h1 className='name'>{username[0]}</h1> */}
             <h2>Welcome, {username}</h2>
             <EventsDisplay formHandler={formHandler} />
             <div className='weather-hud'>

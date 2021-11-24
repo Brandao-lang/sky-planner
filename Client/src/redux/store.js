@@ -8,4 +8,8 @@ export const store = createStore(rootReducer, composeWithDevTools() )
 
 export const persistor = persistStore(store)
 
-export default { store, persistor }
+const reduxModule = {
+    store, persistor
+}
+
+export default reduxModule

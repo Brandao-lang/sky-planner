@@ -7,7 +7,6 @@ const lodash = require('lodash')
 
 export default function EventCard(props) {
     const [isOpen, setIsOpen] = useState(false)
-    // const [warning, setWarning] = useState(false)
     const[isEditOpen, setIsEditOpen] = useState(false)
     const dispatch = useDispatch()
     
@@ -21,23 +20,25 @@ export default function EventCard(props) {
     
     const picked = lodash.filter(forecastArr, day => day.date === props.date)
 
-    console.log(picked)
-    // console.log(props.conditions)
-    
     // symbols used for the show/hide buttons
     const plusSymbol = '+'
     const minusSymbol = '-'
     
     const index = props.index
     const conditionsJoined = props.conditions.join(', ')
-    const eventidObject = {
-        eventId: props.id
-    }
     
-    function deleteHandler(i, eventidObject) {
+    
+    function deleteHandler(i, eventId) {
         dispatch({type: 'events/removeEvent', payload: i})
-        axios.post('/deleteEvent', eventidObject)
-            .then((response) => {
+        
+        axios.delete('/deleteEvent', {
+            params: {
+                eventId
+            }
+        }).then((response) => {
+                console.log(response)
+            }).catch((err) => {
+                console.log(`event could not be deleted: ${err}`)
             })
         }
     
@@ -91,9 +92,10 @@ export default function EventCard(props) {
                 <p><strong className={picked.length === 0 ? '' : props.conditions.includes(picked[0].condition) ? 'warning-is-true' : ''}>Conditions:</strong> <br/> {conditionsJoined}</p>
                 
                 <div className='event-btns'>
-                    <button className='delete-btn' onClick={() => deleteHandler(index, eventidObject)}>Delete</button>
+                    <button className='delete-btn' onClick={() => deleteHandler(index, props.id)}>Delete</button>
                     <button className='edit-btn' onClick={() => setIsEditOpen(!isEditOpen)}>Edit</button>
                 </div>
+                
                 <EditEvent isEditOpen={isEditOpen} showEditHandler={showEditHandler} id={props.id} index ={index} title={props.title} description={props.description} date={props.date} conditions={props.conditions} minTempF={props.minTemp} maxTempF={props.maxTemp} minHumidity={props.minHumidity} maxHumidity={props.maxHumidity}/>
             </div>
            

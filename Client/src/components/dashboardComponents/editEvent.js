@@ -76,7 +76,7 @@ export default function EditEvent(props) {
             id: props.id
         }
 
-       axios.post('/editEvent', eventObj)
+       axios.put('/editEvent', eventObj)
         .then(res => {
             const resObj = res.data
             
@@ -105,8 +105,8 @@ export default function EditEvent(props) {
                 setMinHumidity(disObj.minHumidity)
                 setMaxHumidity(disObj.maxHumidity)
         })
-        .catch(err => {
-            console.log(err)
+        .catch((err) => {
+            console.log(`event could not be edited: ${err}`)
         })
     }
 

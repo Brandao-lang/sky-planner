@@ -65,7 +65,7 @@ const inititalState = {
     }
 }
 
-//action creator goes here??
+
 
 export default function weatherSlice(state=inititalState, action) {
     switch(action.type) {
