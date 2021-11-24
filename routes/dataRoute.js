@@ -67,7 +67,7 @@ module.exports = {
     getWeather: async (req, res) => {
         const name = req.query.name        
         
-        const weatherCall = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${name}&days=5&aqi=no&alerts=no`).then(response => {
+        const weatherCall = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_KEY}&q=${name}&days=5&aqi=no&alerts=no`).then(response => {
             const weatherInfo = response.data
             res.status(200).send(weatherInfo)
         })
