@@ -13,8 +13,8 @@ export default function Login(props) {
             user_email: '',
             user_password: ''
     },
-        onSubmit: (values, {resetForm}) => {
-        axios.get('/login', {
+        onSubmit: async(values, {resetForm}) => {
+        await axios.get('/login', {
             params: {
                 user_email: formik.values.user_email,
                 user_password: formik.values.user_password 
